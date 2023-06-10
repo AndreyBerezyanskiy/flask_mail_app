@@ -10,7 +10,7 @@ def main():
     msg = Message(
         "Hello",
         sender="andrii.berezyanskii@gmail.com",
-        recipients=["lokotey.yana@gmail.com"],
+        recipients=["lokotey.yana@gmail.com", "andrey.berezyanskiy@gmail.com"],
     )
     msg.body = "Hello Flask message sent from Flask-Mail"
     msg.html = render_template("email-layout.html")
