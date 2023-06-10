@@ -14,6 +14,6 @@ def main():
     )
     msg.body = "Hello Flask message sent from Flask-Mail"
     msg.html = render_template("email-layout.html")
-    mail.send(msg)
+    # mail.send(msg)
 
     return render_template("email-layout.html", name="Andrii")
