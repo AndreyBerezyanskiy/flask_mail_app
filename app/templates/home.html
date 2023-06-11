@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #87928b;">
+    <div style=" background-color: #3e4848; ">
+      <form role="form"  action="{{ url_for('main.main') }}" method="post" style="padding: 48px; display: flex; height: 100%; flex-direction: column; justify-content: start;">
+        {{ form.csrf_token }}
+        <div style="margin-bottom: 24px;">
+          {{form.name(style="padding: 5px; background-color: #d7d7d7", placeholder="Input Your Name")}}
+        </div>
+        <div style="margin-bottom: 24px;"style="margin-bottom: 24px;">
+          {{form.email(style="padding: 5px; background-color: #d7d7d7",  placeholder="Input Your Email") }}
+        </div>
+        <button style=" display: inline-block; padding: 20px; justify-self: flex-end; background-color: #d7d7d7; cursor: pointer;" type="submit" class="">
+            <span class="">Send Email</span>
+        </button>
+      </form>
+    </div>
+</body>
+</html>
