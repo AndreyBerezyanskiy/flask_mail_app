@@ -14,19 +14,18 @@
       box-shadow: 0px 0px 1px 1px #3f4c43;
     }
 
-    /* @media screen and (min-width: 530px){
-      .col-sm {
-        display: none;
-      }
-
+    @media screen and (max-width: 500px){
       .col-lg {
-        display: initial;
-      }
-
-      .main-image {
-        display: inline-block;
-      }
-    } */
+      display: block;
+      width: 100% !important;
+      text-align: center;
+    }
+    .main-image {
+      width: auto !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    }
   </style>
 </head>
 <body style="margin:0; padding:0;word-spacing:normal;">
@@ -45,7 +44,7 @@
             <tr>
               <td style="padding: 30px 30px 15px; background-color: #a4c5b4; background-image: url(../static/img/background.png);">
                 <h1 style="margin-bottom: 50px; font-size: 50px; line-height: 62px; font-weight: bold; ">
-                  Welcome to UGS, <br> Yanochka!
+                  Welcome to UGS, <br> {{ name }}!
                 </h1>
                 <p>
                   We are University Graphic Systems, a student-run and operated print service located on Cal Poly’s campus.
@@ -67,15 +66,15 @@
                 <table role="presentation" width="100%" style="table-layout: fixed; border-spacing: 20px;">
                   <tr>
                       <td class="col-lg">
-                        <img class="main-image" style="width: 100%; height: auto;" src="{{ url_for('static', filename='img/img1.png', _external=True) }}" alt="">
+                        <img class="main-image" style=" width: 100%; height: auto;" src="{{ url_for('static', filename='img/img1.png', _external=True) }}" alt="">
                       </td>
-                      <td class="col-lg" style="text-align: left; vertical-align: top;">
-                        <h3>
-                          Resume
-                        </h3>
-                        <p>
-                          Eight unique resume templates available. Templates cost $15 plus the cost of printing, see our services page for pricing.
-                        </p>
+                      <td class="col-lg" style=" text-align: left; vertical-align: top;">
+                          <h3>
+                            Resume
+                          </h3>
+                          <p>
+                            Eight unique resume templates available. Templates cost $15 plus the cost of printing, see our services page for pricing.
+                          </p>
                       </td>
                   </tr>
                   <tr>
@@ -88,7 +87,7 @@
                         </p>
                       </td>
                       <td class="col-lg">
-                        <img class="main-image" style="display: inline-block; width: 100%; height: auto; margin-bottom: 20px;" src="{{ url_for('static', filename='img/img2.png', _external=True) }}" alt="">
+                        <img class="main-image" style="width: 100%; height: auto; margin-bottom: 20px;" src="{{ url_for('static', filename='img/img2.png', _external=True) }}" alt="">
                       </td>
                   </tr>
                 </table>
